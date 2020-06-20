@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translate xmlns:android="http://schemas.android.com/apk/res/android"
-    android:toXDelta="0%"
-    android:toYDelta="0%"
-    android:fromXDelta="150%"
-    android:fromYDelta="150%"
+    android:toXDelta="150%"
+    android:toYDelta="150%"
+    android:fromXDelta="0%"
+    android:fromYDelta="0%"
     android:duration="3000"
     android:fillBefore="true"
     >

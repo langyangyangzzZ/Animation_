@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button_alpha"
+            android:layout_weight="1"
+            android:text="alpha\n透明"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/button_scale"
+            android:layout_weight="1"
+            android:text="scale\n缩放"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/button_translate"
+            android:layout_weight="1"
+            android:text="translate\n位移"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/button_rotate"
+            android:layout_weight="1"
+            android:text="rotate\n旋转"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/button_set"
+        android:text="set组合使用"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_animation"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="150dp"/>
+
+
+
+</LinearLayout>

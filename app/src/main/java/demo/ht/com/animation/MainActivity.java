@@ -31,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button button_tween2 = findViewById(R.id.button_tween2);
+        //Tween Animation补间动画 动态代码实现
+        button_tween2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,TweenAnimation2Activity.class));
+            }
+        });
+
 
     }
 }
