@@ -32,7 +32,7 @@ public class PropertyOfObjectActivity extends AppCompatActivity {
                     public void onAnimationUpdate(ValueAnimator animation) {
                         Character animatedValue = (Character) animation.getAnimatedValue();
                         tv.setText(String.valueOf(animatedValue));
-                        
+
                     }
                 });
                 valueAnimator.start();
