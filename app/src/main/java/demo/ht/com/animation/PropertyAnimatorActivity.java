@@ -97,6 +97,7 @@ public class PropertyAnimatorActivity extends AppCompatActivity {
                     Toast.makeText(PropertyAnimatorActivity.this, "没有获取原控件", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                
 
                 ValueAnimator clone = valueAnimator.clone();
                 clone.setStartDelay(2000);
