@@ -1,5 +1,6 @@
 package demo.ht.com.animation;
 
+import Evaluator.MyEvaluator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.BounceInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -47,9 +49,9 @@ public class PropertyAnimatorActivity extends AppCompatActivity {
         button_valueAnimator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                valueAnimator = ValueAnimator.ofFloat(0f, 400f,200f,600f,405.2f,202.1f,600f);
+                valueAnimator = ValueAnimator.ofFloat(0f, 400f);
                 valueAnimator.setDuration(2000);
-                valueAnimator.setRepeatCount(3);//执行三次
+                valueAnimator.setRepeatCount(1);//执行三次
                 valueAnimator.setRepeatMode(ValueAnimator.REVERSE);//反转
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
@@ -97,7 +99,7 @@ public class PropertyAnimatorActivity extends AppCompatActivity {
                     Toast.makeText(PropertyAnimatorActivity.this, "没有获取原控件", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                
+
 
                 ValueAnimator clone = valueAnimator.clone();
                 clone.setStartDelay(2000);

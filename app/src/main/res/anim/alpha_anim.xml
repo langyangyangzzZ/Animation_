@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <alpha xmlns:android="http://schemas.android.com/apk/res/android"
-android:toAlpha="1"
-android:fromAlpha="0.1"
-android:duration="3000"
-android:fillBefore="true"
-android:repeatCount="3"
-android:repeatMode="reverse"
-    >
+    android:duration="3000"
+    android:fillBefore="true"
+    android:fromAlpha="0.1"
+    android:interpolator="@android:anim/bounce_interpolator"
+    android:repeatCount="3"
+    android:repeatMode="reverse"
+    android:toAlpha="1">
+
 </alpha>

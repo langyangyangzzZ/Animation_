@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PropertyAnimatorActivity"></activity>
+        <activity android:name=".PropertyOfObjectActivity"></activity>
+        <activity android:name=".PropertyAnimatorActivity" />
         <activity android:name=".TweenAnimation2Activity" />
         <activity android:name=".TweenAnimationActivity" />
         <activity android:name=".MainActivity">

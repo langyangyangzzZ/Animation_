@@ -42,11 +42,23 @@ public class MainActivity extends AppCompatActivity {
 
         Button button_property = findViewById(R.id.button_property);
 
+        //OfInt 和 OfFloat 使用
         button_property.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,PropertyAnimatorActivity.class));
             }
         });
+
+
+        Button button_property2 = findViewById(R.id.button_property2);
+        //ofObject使用
+        button_property2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,PropertyOfObjectActivity.class));
+            }
+        });
+
     }
 }
