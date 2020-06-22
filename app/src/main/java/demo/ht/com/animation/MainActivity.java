@@ -40,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button button_property = findViewById(R.id.button_property);
 
+        button_property.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,PropertyAnimatorActivity.class));
+            }
+        });
     }
 }

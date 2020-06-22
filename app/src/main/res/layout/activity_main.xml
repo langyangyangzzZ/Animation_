@@ -17,6 +17,11 @@
         android:text="补间动画2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/button_property"
+        android:text="属性动画"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
 
