@@ -30,6 +30,7 @@ public class PropertyOfObjectActivity extends AppCompatActivity {
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
+                        
                         Character animatedValue = (Character) animation.getAnimatedValue();
                         tv.setText(String.valueOf(animatedValue));
 
