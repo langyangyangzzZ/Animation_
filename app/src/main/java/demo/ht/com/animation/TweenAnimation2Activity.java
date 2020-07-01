@@ -18,6 +18,7 @@ public class TweenAnimation2Activity extends AppCompatActivity {
     private Button button_scale;
     private Button button_translate,button_set;
     private TextView tv_animation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -60,5 +60,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button button_objectAnimator = findViewById(R.id.button_objectAnimator);
+        button_objectAnimator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ObjectAnimatorActivity.class));
+            }
+        });
+        Button button_Animation = findViewById(R.id.button_Animation);
+        button_Animation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,DDActivity.class));
+            }
+        });
+
     }
 }
