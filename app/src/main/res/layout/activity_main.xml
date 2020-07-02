@@ -33,6 +33,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <Button
+        android:id="@+id/button_PropertyValueHolder"
+        android:text="PropertyValueHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
         android:id="@+id/button_Animation"
         android:text="Animation"
         android:layout_width="match_parent"

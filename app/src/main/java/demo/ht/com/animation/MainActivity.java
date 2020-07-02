@@ -74,6 +74,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,DDActivity.class));
             }
         });
+        Button button_PropertyValueHolder = findViewById(R.id.button_PropertyValueHolder);
+        button_PropertyValueHolder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,PropertyValuesHolderActivity.class));
+            }
+        });
 
     }
 }
