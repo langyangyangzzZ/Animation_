@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimatorSetActivity">
+
+    <Button
+        android:id="@+id/button_start"
+        android:text="start动画"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/button_start"
+        android:id="@+id/button_start_build"
+        android:text="Build"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Tv1"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:id="@+id/tv1"
+        android:layout_below="@+id/button_start"
+        android:background="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="50dp"/>
+    <TextView
+        android:text="Tv2"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:id="@+id/tv2"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/tv1"
+        android:layout_below="@+id/button_start"
+        android:background="@color/colorAccent"
+        android:layout_width="100dp"
+        android:layout_height="50dp"/>
+    <TextView
+        android:text="Tv3"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:id="@+id/tv3"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/tv2"
+        android:layout_below="@+id/button_start"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="100dp"
+        android:layout_height="50dp"/>
+
+</RelativeLayout>

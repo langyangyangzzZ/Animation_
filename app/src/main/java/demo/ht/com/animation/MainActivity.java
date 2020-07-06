@@ -81,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,PropertyValuesHolderActivity.class));
             }
         });
+        Button button_AnimationSet = findViewById(R.id.button_AnimationSet);
+        button_AnimationSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,AnimatorSetActivity.class));
+            }
+        });
 
     }
 }

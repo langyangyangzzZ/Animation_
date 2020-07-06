@@ -23,6 +23,13 @@ import android.widget.LinearLayout;
 
 public class DDActivity extends Activity {
 
+    private ImageView image_car;
+    private View view3,view4,view5;
+    private int mX;
+    private int mY;
+    private View view1;
+    private View view2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,20 +44,24 @@ public class DDActivity extends Activity {
         Display defaultDisplay = getWindowManager().getDefaultDisplay();
         Point point = new Point();
         defaultDisplay.getSize(point);
-        final int x = point.x;
-        final int y = point.y;
-        Log.i("szjDisplay111", "x = " + x + ",y = " + y);
+        mX = point.x;
+        mY = point.y;
+        Log.i("szjDisplay111", "x = " + mX + ",y = " + mY);
 
 
-        final View view1 = findViewById(R.id.view1);
-        final View view2 = findViewById(R.id.view2);
-        final View view3 = findViewById(R.id.view3);
+        view1 = findViewById(R.id.view1);
+        view2 = findViewById(R.id.view2);
+        view3 = findViewById(R.id.view3);
+        view4 = findViewById(R.id.view4);
+        view5 = findViewById(R.id.view5);
         final Button button = findViewById(R.id.button);
         final LinearLayout linear_1 = findViewById(R.id.linear_1);
         final LinearLayout linear_2 = findViewById(R.id.linear_2);
         final LinearLayout linear_3 = findViewById(R.id.linear_3);
         final LinearLayout linear_0 = findViewById(R.id.linear_0);
         final LinearLayout linear = findViewById(R.id.linear);
+        final LinearLayout linear_view = findViewById(R.id.linear_view);
+        image_car = findViewById(R.id.image_car);
 
         setObjectAnimator(linear_1, "translationY", 0, 100, 200,300);
         setObjectAnimator(linear_2, "translationY", 0, 100, 200,300);
@@ -62,21 +73,39 @@ public class DDActivity extends Activity {
             @Override
             public void onClick(View v) {
                 linear.setVisibility(View.GONE);
-                setRotateAnimation(view1.getWidth() / 2, view1.getHeight() / 2, view1);
-                setRotateAnimation(view2.getWidth() / 2, view2.getHeight() / 2, view2);
-                setRotateAnimation(view3.getWidth() / 2, view3.getHeight() / 2, view3);
-
-
+                setObjectAnimatorOfFloat(linear_view,"rotation",0,180);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-
                         linear.setVisibility(View.VISIBLE);
+                        Log.i("szjButton",(mX/2 -view3.getPaddingLeft()) +"\t\t"+view3.getPaddingLeft());
+
+                        settranslationXAnimator(image_car,0,50,90,90,90,90,90,0);
+                        view1.setVisibility(View.VISIBLE);
+                        setAlphaAnimation(view1,0,1,0);
+                        setAlphaAnimation(view4,1,0,1);
+                        settranslationXAnimator(linear_0,0,90,0);
+                        settranslationXAnimator(linear_1,0,90,0);
+                        settranslationXAnimator(linear_2,0,90,0);
+                        settranslationXAnimator(linear_3,0,90,0);
                     }
                 }, 3000);
             }
         });
 
+    }
+
+    private void setAlphaAnimation(View view1, float... value) {
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(view1, "alpha", value);
+        alpha.setDuration(8000);
+        alpha.start();
+    }
+
+    public void settranslationXAnimator(View view , float... value){
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(view, "translationX", value);
+        translationX.setDuration(8000);
+        translationX.setAutoCancel(true);
+        translationX.start();
     }
 
     private void setObjectAnimator(LinearLayout linear, String string, float... value) {
@@ -87,23 +116,9 @@ public class DDActivity extends Activity {
         translationY.start();
     }
 
-    public void setRotateAnimation(int x, int y, View view) {
-//        RotateAnimation rotateAnimation = new RotateAnimation(0,90,x/2,y/2);
-//        rotateAnimation.setDuration(3000);
-//        rotateAnimation.setFillAfter(true);
-//        view.setAnimation(rotateAnimation);
-
-        RotateAnimation rotateAnimation = new RotateAnimation(0, 180, x, y);
-        ScaleAnimation scaleAnimation = new ScaleAnimation(1, 1f, 1f, 1f, x, y);
-
-        AnimationSet animationSet = new AnimationSet(true);
-        animationSet.addAnimation(rotateAnimation);
-        animationSet.addAnimation(scaleAnimation);
-
-        animationSet.setDuration(3000);
-        animationSet.setFillAfter(true);
-        view.startAnimation(animationSet);
-
-
+    private void setObjectAnimatorOfFloat(View view ,String propertyName, float... values) {
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, propertyName, values);
+        objectAnimator.setDuration(3000);
+        objectAnimator.start();
     }
 }
