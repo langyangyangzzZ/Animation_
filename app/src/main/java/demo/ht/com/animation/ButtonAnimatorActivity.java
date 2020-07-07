@@ -122,7 +122,6 @@ public class ButtonAnimatorActivity extends AppCompatActivity implements View.On
 
                 Log.i("szjanimatorSet","onAnimationStart");
             }
-
             
             @Override
             public void onAnimationEnd(Animator animation) {
