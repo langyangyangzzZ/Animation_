@@ -41,6 +41,29 @@ public class AnimatorSetActivity extends AppCompatActivity {
 //                animatorSet.playTogether(tv1TranslationY,Tv1BackgroundColor,tv2TranslationY);
                 animatorSet.setTarget(tv2);
                 animatorSet.setDuration(2000);
+
+                animatorSet.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        Log.i("szjaddListener","onAnimationStart");
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        Log.i("szjaddListener","onAnimationEnd");
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                        Log.i("szjaddListener","onAnimationCancel");
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+                        Log.i("szjaddListener","onAnimationRepeat");
+                    }
+                });
+
                 animatorSet.start();
 
             }

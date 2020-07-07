@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonAnimatorActivity">
+
+    <ListView
+        android:visibility="gone"
+        android:layoutAnimation="@anim/layout_animation"
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:id="@+id/openButton"
+        style="@style/OpenButton"
+        android:background="@color/colorPrimary"
+        android:layout_margin="30dp"
+        />
+
+    <Button
+        android:id="@+id/bt1"
+        style="@style/OpenButton"
+        android:background="#ff00ff"
+        android:visibility="gone"
+        android:layout_margin="30dp"
+        />
+    <Button
+        android:id="@+id/bt2"
+        style="@style/OpenButton"
+        android:background="#00ffff"
+        android:visibility="gone"
+        android:layout_margin="30dp"
+        />
+    <Button
+        android:id="@+id/bt3"
+        style="@style/OpenButton"
+        android:background="#0048FF"
+        android:visibility="gone"
+        android:layout_margin="30dp"
+        />
+    <Button
+        android:id="@+id/bt4"
+        style="@style/OpenButton"
+        android:background="#FF003B"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/bt5"
+        style="@style/OpenButton"
+        android:visibility="gone"
+        android:background="#FFDD00"
+        android:layout_margin="30dp"
+        />
+
+
+
+
+</RelativeLayout>
