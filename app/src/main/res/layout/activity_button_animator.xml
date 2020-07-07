@@ -7,7 +7,6 @@
     tools:context=".ButtonAnimatorActivity">
 
     <ListView
-        android:visibility="gone"
         android:layoutAnimation="@anim/layout_animation"
         android:id="@+id/listview"
         android:layout_width="match_parent"
